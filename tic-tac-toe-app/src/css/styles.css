@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, lightblue, lightgreen);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container, .welcome-screen {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  margin-bottom: 10px;
+  color: darkblue;
+}
+.welcome-screen button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: darkblue;
+  color: white;
+  cursor: pointer;
+}
+.welcome-screen button:hover {
+  background-color: navy;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cell {
+  background-color: lightgray;
+  border-radius: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.cell:hover {
+  background-color: silver;
+}
+.cell.disabled {
+  pointer-events: none;
+}
+.status {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.restart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.restart-btn:hover {
+  background-color: navy;
+}
